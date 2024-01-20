@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install pipenv
-          pipenv sync
+          pipenv sync --dev
 
       - name: Check code formatting with flake8
         run: pipenv run flake
@@ -51,9 +51,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install pipenv
-          pipenv sync
+          pipenv sync --dev
 
-      - name: Run tests and collect coverage
+      - name: Run tests
         run: pipenv run pytest
 
     needs: lint

@@ -1,0 +1,484 @@
+source_code: |-
+  {
+    a = 1;
+    b = 1;
+    is_odd = 1;
+    one_c = 1;
+    max_num = 4000000;
+    cash = 0;
+    sum = 0;
+
+    while (max_num >= b) {
+
+        if (one_c == is_odd) {
+            sum = sum + b;
+        }
+
+        cash = a + b;
+        a = b;
+        b = cash;
+        is_odd = 1 - is_odd;
+    }
+
+    print sum;
+  }
+
+stdin: |-
+  Unused
+
+stdout: |-
+  =========================
+  0035c7e1
+  Instructions: 405
+
+out_code_readable: |-
+  00 | 0000000000100001011000000000000000000001         | MOV4 $00, .01
+  04 | 0000010000100001011000000000010000000001         | MOV4 $04, .01
+  08 | 0000100000100001011000000000100000000001         | MOV4 $08, .01
+  0c | 0000110000100001011000000000110000000001         | MOV4 $0c, .01
+  10 | 0001000000100001010100000001000000010100         | MOV4 $10, $14
+  14 | 0001010000100001011000000001100000000000         | MOV4 $18, .00
+  18 | 0001100000100001011000000001110000000000         | MOV4 $1c, .00
+  1c | 0001110000010000010100000001000000000100         | CMP $10, $04
+  20 | 00100000000101011000000000100110                 | JAE .26
+  23 | 00100011000100011000000001001010                 | JMP .4a
+  26 | 0010011000010000010100000000110000001000         | CMP $0c, $08
+  2a | 00101010000100101000000000110000                 | JE .30
+  2d | 00101101000100011000000000110101                 | JMP .35
+  30 | 001100000000101001010100000111000001110000000100 | ADD $1c <- $1c, $04
+  35 | 001101010000101001010100000110000000000000000100 | ADD $18 <- $00, $04
+  3a | 0011101000100001010100000000000000000100         | MOV4 $00, $04
+  3e | 0011111000100001010100000000010000011000         | MOV4 $04, $18
+  42 | 010000100000101101100100000010000000000100001000 | SUB $08 <- .01, $08
+  47 | 01000111000100011000000000011100                 | JMP .1c
+  4a | 0100101000100000111000000000001000100000         | MOV R02, .20
+  4e | 01001110000000111100000000000010                 | DEC R02
+  51 | 0101000100000100111100000000001100000010         | LD R03, R02
+  55 | 0101010100001001111000000000001100000100         | SHR R03, .04
+  59 | 0101100100010000111000000000001100001010         | CMP R03, .0a
+  5d | 01011101000101011000000001100111                 | JAE .67
+  60 | 0110000000001110111000000000001100110000         | ADD1 R03, .30
+  64 | 01100100000100011000000001101011                 | JMP .6b
+  67 | 0110011100001110111000000000001101010111         | ADD1 R03, .57
+  6b | 01101011001000111000000000000001                 | OUT .01
+  6e | 0110111000000100111100000000001100000010         | LD R03, R02
+  72 | 0111001000001000111000000000001100000100         | SHL R03, .04
+  76 | 0111011000001001111000000000001100000100         | SHR R03, .04
+  7a | 0111101000010000111000000000001100001010         | CMP R03, .0a
+  7e | 01111110000101011000000010001000                 | JAE .88
+  81 | 1000000100001110111000000000001100110000         | ADD1 R03, .30
+  85 | 10000101000100011000000010001100                 | JMP .8c
+  88 | 1000100000001110111000000000001101010111         | ADD1 R03, .57
+  8c | 10001100001000111000000000000001                 | OUT .01
+  8f | 10001111000000111100000000000001                 | DEC R01
+  92 | 1001001000010000111000000000001000011100         | CMP R02, .1c
+  96 | 10010110000100111000000001001110                 | JNE .4e
+  99 | 1001100100000001                                 | HLT
+
+out_log: |-
+  DEBUG    root:machine.py:50 1) MOV4 $04, .01 - AC: 00 | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 02 | IOR: 00 | OUT: 03 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 2) MOV4 $08, .01 - AC: 00 | BR: 07 | DP: 07 | DR: 00 | INL: 00 | INR: 06 | IOR: 00 | OUT: 07 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 3) MOV4 $0c, .01 - AC: 00 | BR: 0B | DP: 0B | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: 0B | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 4) MOV4 $10, $14 - AC: 00 | BR: 0F | DP: 0F | DR: 00 | INL: 00 | INR: 0E | IOR: 00 | OUT: 0F | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 5) MOV4 $18, .00 - AC: 00 | BR: 14 | DP: 13 | DR: 00 | INL: 00 | INR: 13 | IOR: 00 | OUT: 14 | R0: 18 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 6) MOV4 $1c, .00 - AC: 00 | BR: 1B | DP: 1B | DR: 00 | INL: 00 | INR: 1A | IOR: 00 | OUT: 1B | R0: 18 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 7) CMP $10, $04 - AC: 00 | BR: 1F | DP: 1F | DR: 00 | INL: 00 | INR: 1E | IOR: 00 | OUT: 1F | R0: 18 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 8) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 18 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 9) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 18 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 10) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 18 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 11) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 18 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 12) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 13) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 14) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 01 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 15) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 01 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 16) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 17) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 18) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 19) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 20) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 21) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 22) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 23) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 02 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 24) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 02 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 25) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 02 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 26) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 27) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 28) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 29) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 30) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 31) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 32) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 33) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 03 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 34) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 03 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 35) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 03 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 36) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 37) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 38) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 39) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 40) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 41) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 42) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 43) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 05 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 44) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 05 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 45) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 05 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 46) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 47) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 48) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 49) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 50) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 51) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 52) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 53) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 08 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 54) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 08 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 55) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 08 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 56) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 57) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 58) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 59) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 60) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 61) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 62) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 63) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 0D | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 64) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 0D | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 65) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 0D | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 66) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 67) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 68) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 69) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 70) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 71) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 72) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 73) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 15 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 74) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 15 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 75) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 15 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 76) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 77) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 78) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 79) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 80) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 81) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 82) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 83) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 22 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 84) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 22 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 85) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 22 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 86) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 87) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 88) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 89) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 90) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 91) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 92) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 93) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 37 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 94) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 37 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 95) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 37 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 96) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 97) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 98) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 99) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 100) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 101) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 102) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 103) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 59 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 104) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 59 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 105) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 59 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 106) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 107) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 108) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 109) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 110) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 111) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 112) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 113) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 90 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 114) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 90 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 115) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 90 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 116) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 117) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 118) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 119) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 120) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 121) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 122) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 123) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: E9 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 124) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: E9 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 125) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: E9 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 126) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 127) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 128) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 129) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 130) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 131) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 132) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 133) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 79 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 134) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 79 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 135) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 79 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 136) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 137) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 138) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 139) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 140) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 141) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 142) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 143) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 62 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 144) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 62 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 145) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 62 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 146) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 147) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 148) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 149) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 150) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 151) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 152) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 153) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: DB | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 154) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: DB | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 155) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: DB | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 156) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 157) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 158) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 159) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 160) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 161) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 162) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 163) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 164) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 3D | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 165) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 3D | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 166) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 167) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 168) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 169) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 170) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 171) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 172) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 173) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 18 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 174) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 18 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 175) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 18 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 176) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 177) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 178) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 179) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 180) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 181) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 182) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 183) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 55 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 184) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 55 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 185) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 55 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 186) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 187) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 188) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 189) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 190) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 191) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 192) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 193) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 6D | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 194) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 6D | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 195) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 6D | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 196) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 197) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 198) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 199) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 200) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 201) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 202) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 203) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: C2 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 204) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: C2 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 205) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: C2 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 206) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 207) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 208) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 209) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 210) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 211) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 212) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 213) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 2F | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 214) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 2F | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 215) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 2F | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 216) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 217) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 218) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 219) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 220) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 221) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 222) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 223) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: F1 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 224) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: F1 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 225) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: F1 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 226) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 227) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 228) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 229) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 230) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 231) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 232) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 233) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 20 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 234) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 20 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 235) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 20 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 236) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 237) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 238) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 239) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 240) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 241) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 242) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 243) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 11 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 244) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 11 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 245) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 11 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 246) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 247) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 248) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 249) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 250) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 251) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 252) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 253) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 31 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 254) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 31 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 255) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 31 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 256) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 257) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 258) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 02 | INL: 3D | INR: 02 | IOR: 00 | OUT: 3B | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 259) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 02 | INL: 3D | INR: 02 | IOR: 00 | OUT: 3B | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 260) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 261) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 262) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 263) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 42 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 264) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 42 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 265) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 42 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 266) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 267) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 268) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 04 | INL: 3D | INR: 04 | IOR: 00 | OUT: 39 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 269) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 04 | INL: 3D | INR: 04 | IOR: 00 | OUT: 39 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 270) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 271) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 272) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 273) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 73 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 274) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 73 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 275) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 73 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 276) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 277) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 278) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 07 | INL: 3D | INR: 07 | IOR: 00 | OUT: 36 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 279) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 07 | INL: 3D | INR: 07 | IOR: 00 | OUT: 36 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 280) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 281) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 282) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 283) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: B5 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 284) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: B5 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 285) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: B5 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 286) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 287) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 288) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 0C | INL: 3D | INR: 0C | IOR: 00 | OUT: 31 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 289) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 0C | INL: 3D | INR: 0C | IOR: 00 | OUT: 31 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 290) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 291) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 292) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 293) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 28 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 294) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 28 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 295) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 28 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 296) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 297) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 298) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 14 | INL: 3D | INR: 14 | IOR: 00 | OUT: 29 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 299) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 14 | INL: 3D | INR: 14 | IOR: 00 | OUT: 29 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 300) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 301) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 302) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 303) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: DD | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 304) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: DD | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 305) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: DD | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 306) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 307) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 308) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 21 | INL: 3D | INR: 21 | IOR: 00 | OUT: 1C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 309) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 21 | INL: 3D | INR: 21 | IOR: 00 | OUT: 1C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 310) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 311) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 312) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 313) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 05 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 314) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 05 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 315) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 05 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 316) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 317) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 318) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 35 | INL: 3D | INR: 35 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 319) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 35 | INL: 3D | INR: 35 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 320) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 321) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 322) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 323) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: E2 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 324) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: E2 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 325) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: E2 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 326) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 327) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 328) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 08 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 329) JMP .4a - AC: 12 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 08 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 330) MOV R02, .20 - AC: 12 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 08 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 331) DEC R02 - AC: 20 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 20 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 332) LD R03, R02 - AC: 20 | BR: 06 | DP: 06 | DR: 57 | INL: 20 | INR: 57 | IOR: 00 | OUT: 1F | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 333) SHR R03, .04 - AC: 20 | BR: 06 | DP: 1F | DR: 00 | INL: 20 | INR: 57 | IOR: 00 | OUT: 1F | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 334) CMP R03, .0a - AC: 04 | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 335) JAE .67 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 336) ADD1 R03, .30 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 337) JMP .6b - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 338) OUT .01 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 339) LD R03, R02 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 340) SHL R03, .04 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 00 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 341) SHR R03, .04 - AC: 04 | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 342) CMP R03, .0a - AC: 04 | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 343) JAE .88 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 344) ADD1 R03, .30 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 345) JMP .8c - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 346) OUT .01 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 347) DEC R01 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 348) CMP R02, .1c - AC: 0A | BR: 05 | DP: 1F | DR: 00 | INL: 06 | INR: 30 | IOR: 30 | OUT: 05 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 349) JNE .4e - AC: 1C | BR: 05 | DP: 1F | DR: 00 | INL: 1F | INR: 1C | IOR: 30 | OUT: 03 | R0: 1F | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 350) DEC R02 - AC: 1C | BR: 05 | DP: 1F | DR: 00 | INL: 1F | INR: 1C | IOR: 30 | OUT: 03 | R0: 1F | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 351) LD R03, R02 - AC: 1C | BR: 05 | DP: 1F | DR: 00 | INL: 1F | INR: 1C | IOR: 30 | OUT: 1E | R0: 1E | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 352) SHR R03, .04 - AC: 1C | BR: 05 | DP: 1E | DR: 35 | INL: 1F | INR: 1C | IOR: 35 | OUT: 1E | R0: 1E | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 353) CMP R03, .0a - AC: 04 | BR: 05 | DP: 1E | DR: 35 | INL: 35 | INR: 04 | IOR: 03 | OUT: 03 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 354) JAE .67 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 0A | IOR: 03 | OUT: F9 | R0: 1E | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 355) ADD1 R03, .30 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 0A | IOR: 03 | OUT: F9 | R0: 1E | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 356) JMP .6b - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 33 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 357) OUT .01 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 33 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 358) LD R03, R02 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 33 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 359) SHL R03, .04 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 35 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 360) SHR R03, .04 - AC: 04 | BR: 05 | DP: 1E | DR: 35 | INL: 35 | INR: 04 | IOR: 50 | OUT: 50 | R0: 1E | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 361) CMP R03, .0a - AC: 04 | BR: 05 | DP: 1E | DR: 35 | INL: 50 | INR: 04 | IOR: 05 | OUT: 05 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 362) JAE .88 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 0A | IOR: 05 | OUT: FB | R0: 1E | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 363) ADD1 R03, .30 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 0A | IOR: 05 | OUT: FB | R0: 1E | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 364) JMP .8c - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 35 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 365) OUT .01 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 35 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 366) DEC R01 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 35 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 367) CMP R02, .1c - AC: 0A | BR: 04 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 04 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 368) JNE .4e - AC: 1C | BR: 04 | DP: 1E | DR: 35 | INL: 1E | INR: 1C | IOR: 35 | OUT: 02 | R0: 1E | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 369) DEC R02 - AC: 1C | BR: 04 | DP: 1E | DR: 35 | INL: 1E | INR: 1C | IOR: 35 | OUT: 02 | R0: 1E | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 370) LD R03, R02 - AC: 1C | BR: 04 | DP: 1E | DR: 35 | INL: 1E | INR: 1C | IOR: 35 | OUT: 1D | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 371) SHR R03, .04 - AC: 1C | BR: 04 | DP: 1D | DR: C7 | INL: 1E | INR: 1C | IOR: C7 | OUT: 1D | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 372) CMP R03, .0a - AC: 04 | BR: 04 | DP: 1D | DR: C7 | INL: C7 | INR: 04 | IOR: 0C | OUT: 0C | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 373) JAE .67 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 0A | IOR: 0C | OUT: 02 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 374) ADD1 R03, .57 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 0A | IOR: 0C | OUT: 02 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 375) OUT .01 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 57 | IOR: 63 | OUT: 63 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 376) LD R03, R02 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 57 | IOR: 63 | OUT: 63 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 377) SHL R03, .04 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 57 | IOR: C7 | OUT: 63 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 378) SHR R03, .04 - AC: 04 | BR: 04 | DP: 1D | DR: C7 | INL: C7 | INR: 04 | IOR: 70 | OUT: 70 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 379) CMP R03, .0a - AC: 04 | BR: 04 | DP: 1D | DR: C7 | INL: 70 | INR: 04 | IOR: 07 | OUT: 07 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 380) JAE .88 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 0A | IOR: 07 | OUT: FD | R0: 1D | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 381) ADD1 R03, .30 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 0A | IOR: 07 | OUT: FD | R0: 1D | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 382) JMP .8c - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 383) OUT .01 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 384) DEC R01 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 385) CMP R02, .1c - AC: 0A | BR: 03 | DP: 1D | DR: C7 | INL: 04 | INR: 30 | IOR: 37 | OUT: 03 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 386) JNE .4e - AC: 1C | BR: 03 | DP: 1D | DR: C7 | INL: 1D | INR: 1C | IOR: 37 | OUT: 01 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 387) DEC R02 - AC: 1C | BR: 03 | DP: 1D | DR: C7 | INL: 1D | INR: 1C | IOR: 37 | OUT: 01 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 388) LD R03, R02 - AC: 1C | BR: 03 | DP: 1D | DR: C7 | INL: 1D | INR: 1C | IOR: 37 | OUT: 1C | R0: 1C | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 389) SHR R03, .04 - AC: 1C | BR: 03 | DP: 1C | DR: E1 | INL: 1D | INR: 1C | IOR: E1 | OUT: 1C | R0: 1C | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 390) CMP R03, .0a - AC: 04 | BR: 03 | DP: 1C | DR: E1 | INL: E1 | INR: 04 | IOR: 0E | OUT: 0E | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 391) JAE .67 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 0A | IOR: 0E | OUT: 04 | R0: 1C | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 392) ADD1 R03, .57 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 0A | IOR: 0E | OUT: 04 | R0: 1C | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 393) OUT .01 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 57 | IOR: 65 | OUT: 65 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 394) LD R03, R02 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 57 | IOR: 65 | OUT: 65 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 395) SHL R03, .04 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 57 | IOR: E1 | OUT: 65 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 396) SHR R03, .04 - AC: 04 | BR: 03 | DP: 1C | DR: E1 | INL: E1 | INR: 04 | IOR: 10 | OUT: 10 | R0: 1C | N: 0, Z: 0, V: 0, C: 1
+  DEBUG    root:machine.py:50 397) CMP R03, .0a - AC: 04 | BR: 03 | DP: 1C | DR: E1 | INL: 10 | INR: 04 | IOR: 01 | OUT: 01 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 398) JAE .88 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 0A | IOR: 01 | OUT: F7 | R0: 1C | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 399) ADD1 R03, .30 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 0A | IOR: 01 | OUT: F7 | R0: 1C | N: 1, Z: 0, V: 1, C: 0
+  DEBUG    root:machine.py:50 400) JMP .8c - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 30 | IOR: 31 | OUT: 31 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 401) OUT .01 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 30 | IOR: 31 | OUT: 31 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 402) DEC R01 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 30 | IOR: 31 | OUT: 31 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 403) CMP R02, .1c - AC: 0A | BR: 02 | DP: 1C | DR: E1 | INL: 03 | INR: 30 | IOR: 31 | OUT: 02 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:50 404) JNE .4e - AC: 1C | BR: 02 | DP: 1C | DR: E1 | INL: 1C | INR: 1C | IOR: 31 | OUT: 00 | R0: 1C | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:50 405) HLT - AC: 1C | BR: 02 | DP: 1C | DR: E1 | INL: 1C | INR: 1C | IOR: 31 | OUT: 00 | R0: 1C | N: 0, Z: 1, V: 0, C: 0
+  INFO     root:machine.py:54 Out buffer: 0035c7e1

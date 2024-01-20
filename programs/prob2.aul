@@ -1,0 +1,23 @@
+{
+    a = 1;
+    b = 1;
+    is_odd = 1;
+    one_c = 1;
+    max_num = 4000000;
+    cash = 0;
+    sum = 0;
+
+    while (max_num >= b) {
+
+        if (one_c == is_odd) {
+            sum = sum + b;
+        }
+
+        cash = a + b;
+        a = b;
+        b = cash;
+        is_odd = 1 - is_odd;
+    }
+
+    print sum;
+}

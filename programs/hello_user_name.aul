@@ -1,0 +1,17 @@
+{
+
+    print "What is your name?\n";
+
+    print "Hello, ";
+
+    a = '0';
+    d = '\0';
+
+    read a;
+
+    while (a != d){
+        print a;
+        read a;
+    }
+
+}

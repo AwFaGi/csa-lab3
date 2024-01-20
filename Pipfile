@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pytest = "*"
+pytest-golden = "*"
+
+[dev-packages]
+pylint = "*"
+flake8 = "*"
+mypy = "*"
+
+[requires]
+python_version = "3.10"
+python_full_version = "3.10.13"
+
+[scripts]
+flake = "flake8 csa_lab3"
+mypy = "mypy --strict csa_lab3"
+pylint = "pylint csa_lab3 --max-line-length=120"
+pytest = "python -m pytest"

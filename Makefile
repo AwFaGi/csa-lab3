@@ -1,4 +1,4 @@
-all: flake mypy pylint
+all: flake mypy pylint test
 
 flake:
 	pipenv run flake
@@ -8,3 +8,6 @@ mypy:
 
 pylint:
 	pipenv run pylint
+
+test:
+	pipenv run pytest

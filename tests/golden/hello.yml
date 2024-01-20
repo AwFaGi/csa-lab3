@@ -10,7 +10,7 @@ stdout: |-
   =========================
   Hello world!
   Instructions: 76
-  
+
 out_code_readable: |-
   00 | 0000000000100000111000000000001000000000         | MOV R02, .00
   04 | 0000010000000100111100000000001100000010         | LD R03, R02
@@ -22,80 +22,80 @@ out_code_readable: |-
   18 | 0001100000000001                                 | HLT
 
 out_log: |-
-  DEBUG    root:machine.py:50 1) LD R03, R02 - AC: 00 | BR: 00 | DP: 00 | DR: 00 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 2) CMP R03, .00 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 00 | INR: 00 | IOR: 48 | OUT: 00 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 3) JE .18 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 48 | INR: 00 | IOR: 48 | OUT: 48 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 4) OUT .01 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 48 | INR: 00 | IOR: 48 | OUT: 48 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 5) INC R02 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 48 | INR: 00 | IOR: 48 | OUT: 48 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 6) JMP .04 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 00 | INR: 00 | IOR: 48 | OUT: 01 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 7) LD R03, R02 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 00 | INR: 00 | IOR: 48 | OUT: 01 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 8) CMP R03, .00 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 00 | INR: 00 | IOR: 65 | OUT: 01 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 9) JE .18 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 65 | INR: 00 | IOR: 65 | OUT: 65 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 10) OUT .01 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 65 | INR: 00 | IOR: 65 | OUT: 65 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 11) INC R02 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 65 | INR: 00 | IOR: 65 | OUT: 65 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 12) JMP .04 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 01 | INR: 00 | IOR: 65 | OUT: 02 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 13) LD R03, R02 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 01 | INR: 00 | IOR: 65 | OUT: 02 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 14) CMP R03, .00 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 01 | INR: 00 | IOR: 6C | OUT: 02 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 15) JE .18 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 02 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 16) OUT .01 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 02 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 17) INC R02 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 02 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 18) JMP .04 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 02 | INR: 00 | IOR: 6C | OUT: 03 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 19) LD R03, R02 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 02 | INR: 00 | IOR: 6C | OUT: 03 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 20) CMP R03, .00 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 02 | INR: 00 | IOR: 6C | OUT: 03 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 21) JE .18 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 03 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 22) OUT .01 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 03 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 23) INC R02 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 03 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 24) JMP .04 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 03 | INR: 00 | IOR: 6C | OUT: 04 | R0: 04 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 25) LD R03, R02 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 03 | INR: 00 | IOR: 6C | OUT: 04 | R0: 04 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 26) CMP R03, .00 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 03 | INR: 00 | IOR: 6F | OUT: 04 | R0: 04 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 27) JE .18 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 04 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 28) OUT .01 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 04 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 29) INC R02 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 04 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 30) JMP .04 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 04 | INR: 00 | IOR: 6F | OUT: 05 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 31) LD R03, R02 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 04 | INR: 00 | IOR: 6F | OUT: 05 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 32) CMP R03, .00 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 04 | INR: 00 | IOR: 20 | OUT: 05 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 33) JE .18 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 20 | INR: 00 | IOR: 20 | OUT: 20 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 34) OUT .01 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 20 | INR: 00 | IOR: 20 | OUT: 20 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 35) INC R02 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 20 | INR: 00 | IOR: 20 | OUT: 20 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 36) JMP .04 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 05 | INR: 00 | IOR: 20 | OUT: 06 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 37) LD R03, R02 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 05 | INR: 00 | IOR: 20 | OUT: 06 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 38) CMP R03, .00 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 05 | INR: 00 | IOR: 77 | OUT: 06 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 39) JE .18 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 77 | INR: 00 | IOR: 77 | OUT: 77 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 40) OUT .01 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 77 | INR: 00 | IOR: 77 | OUT: 77 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 41) INC R02 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 77 | INR: 00 | IOR: 77 | OUT: 77 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 42) JMP .04 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 06 | INR: 00 | IOR: 77 | OUT: 07 | R0: 07 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 43) LD R03, R02 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 06 | INR: 00 | IOR: 77 | OUT: 07 | R0: 07 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 44) CMP R03, .00 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 06 | INR: 00 | IOR: 6F | OUT: 07 | R0: 07 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 45) JE .18 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 07 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 46) OUT .01 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 07 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 47) INC R02 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 07 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 48) JMP .04 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 07 | INR: 00 | IOR: 6F | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 49) LD R03, R02 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 07 | INR: 00 | IOR: 6F | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 50) CMP R03, .00 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 07 | INR: 00 | IOR: 72 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 51) JE .18 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 72 | INR: 00 | IOR: 72 | OUT: 72 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 52) OUT .01 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 72 | INR: 00 | IOR: 72 | OUT: 72 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 53) INC R02 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 72 | INR: 00 | IOR: 72 | OUT: 72 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 54) JMP .04 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 08 | INR: 00 | IOR: 72 | OUT: 09 | R0: 09 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 55) LD R03, R02 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 08 | INR: 00 | IOR: 72 | OUT: 09 | R0: 09 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 56) CMP R03, .00 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 08 | INR: 00 | IOR: 6C | OUT: 09 | R0: 09 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 57) JE .18 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 09 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 58) OUT .01 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 09 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 59) INC R02 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 09 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 60) JMP .04 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 09 | INR: 00 | IOR: 6C | OUT: 0A | R0: 0A | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 61) LD R03, R02 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 09 | INR: 00 | IOR: 6C | OUT: 0A | R0: 0A | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 62) CMP R03, .00 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 09 | INR: 00 | IOR: 64 | OUT: 0A | R0: 0A | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 63) JE .18 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 64 | INR: 00 | IOR: 64 | OUT: 64 | R0: 0A | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 64) OUT .01 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 64 | INR: 00 | IOR: 64 | OUT: 64 | R0: 0A | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 65) INC R02 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 64 | INR: 00 | IOR: 64 | OUT: 64 | R0: 0A | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 66) JMP .04 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 0A | INR: 00 | IOR: 64 | OUT: 0B | R0: 0B | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 67) LD R03, R02 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 0A | INR: 00 | IOR: 64 | OUT: 0B | R0: 0B | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 68) CMP R03, .00 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 0A | INR: 00 | IOR: 21 | OUT: 0B | R0: 0B | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 69) JE .18 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 21 | INR: 00 | IOR: 21 | OUT: 21 | R0: 0B | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 70) OUT .01 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 21 | INR: 00 | IOR: 21 | OUT: 21 | R0: 0B | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 71) INC R02 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 21 | INR: 00 | IOR: 21 | OUT: 21 | R0: 0B | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 72) JMP .04 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 0B | INR: 00 | IOR: 21 | OUT: 0C | R0: 0C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 73) LD R03, R02 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 0B | INR: 00 | IOR: 21 | OUT: 0C | R0: 0C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 74) CMP R03, .00 - AC: 00 | BR: 00 | DP: 0C | DR: 00 | INL: 0B | INR: 00 | IOR: 00 | OUT: 0C | R0: 0C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:50 75) JE .18 - AC: 00 | BR: 00 | DP: 0C | DR: 00 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 0C | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:50 76) HLT - AC: 00 | BR: 00 | DP: 0C | DR: 00 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 0C | N: 0, Z: 1, V: 0, C: 0
-  INFO     root:machine.py:54 Out buffer: Hello world!
+  DEBUG    root:machine.py:23 1) LD R03, R02 - AC: 00 | BR: 00 | DP: 00 | DR: 00 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 2) CMP R03, .00 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 00 | INR: 00 | IOR: 48 | OUT: 00 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 3) JE .18 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 48 | INR: 00 | IOR: 48 | OUT: 48 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 4) OUT .01 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 48 | INR: 00 | IOR: 48 | OUT: 48 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 5) INC R02 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 48 | INR: 00 | IOR: 48 | OUT: 48 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 6) JMP .04 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 00 | INR: 00 | IOR: 48 | OUT: 01 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 7) LD R03, R02 - AC: 00 | BR: 00 | DP: 00 | DR: 48 | INL: 00 | INR: 00 | IOR: 48 | OUT: 01 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 8) CMP R03, .00 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 00 | INR: 00 | IOR: 65 | OUT: 01 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 9) JE .18 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 65 | INR: 00 | IOR: 65 | OUT: 65 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 10) OUT .01 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 65 | INR: 00 | IOR: 65 | OUT: 65 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 11) INC R02 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 65 | INR: 00 | IOR: 65 | OUT: 65 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 12) JMP .04 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 01 | INR: 00 | IOR: 65 | OUT: 02 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 13) LD R03, R02 - AC: 00 | BR: 00 | DP: 01 | DR: 65 | INL: 01 | INR: 00 | IOR: 65 | OUT: 02 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 14) CMP R03, .00 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 01 | INR: 00 | IOR: 6C | OUT: 02 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 15) JE .18 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 16) OUT .01 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 17) INC R02 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 18) JMP .04 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 02 | INR: 00 | IOR: 6C | OUT: 03 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 19) LD R03, R02 - AC: 00 | BR: 00 | DP: 02 | DR: 6C | INL: 02 | INR: 00 | IOR: 6C | OUT: 03 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 20) CMP R03, .00 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 02 | INR: 00 | IOR: 6C | OUT: 03 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 21) JE .18 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 22) OUT .01 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 23) INC R02 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 24) JMP .04 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 03 | INR: 00 | IOR: 6C | OUT: 04 | R0: 04 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 25) LD R03, R02 - AC: 00 | BR: 00 | DP: 03 | DR: 6C | INL: 03 | INR: 00 | IOR: 6C | OUT: 04 | R0: 04 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 26) CMP R03, .00 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 03 | INR: 00 | IOR: 6F | OUT: 04 | R0: 04 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 27) JE .18 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 04 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 28) OUT .01 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 04 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 29) INC R02 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 04 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 30) JMP .04 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 04 | INR: 00 | IOR: 6F | OUT: 05 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 31) LD R03, R02 - AC: 00 | BR: 00 | DP: 04 | DR: 6F | INL: 04 | INR: 00 | IOR: 6F | OUT: 05 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 32) CMP R03, .00 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 04 | INR: 00 | IOR: 20 | OUT: 05 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 33) JE .18 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 20 | INR: 00 | IOR: 20 | OUT: 20 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 34) OUT .01 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 20 | INR: 00 | IOR: 20 | OUT: 20 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 35) INC R02 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 20 | INR: 00 | IOR: 20 | OUT: 20 | R0: 05 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 36) JMP .04 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 05 | INR: 00 | IOR: 20 | OUT: 06 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 37) LD R03, R02 - AC: 00 | BR: 00 | DP: 05 | DR: 20 | INL: 05 | INR: 00 | IOR: 20 | OUT: 06 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 38) CMP R03, .00 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 05 | INR: 00 | IOR: 77 | OUT: 06 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 39) JE .18 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 77 | INR: 00 | IOR: 77 | OUT: 77 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 40) OUT .01 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 77 | INR: 00 | IOR: 77 | OUT: 77 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 41) INC R02 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 77 | INR: 00 | IOR: 77 | OUT: 77 | R0: 06 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 42) JMP .04 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 06 | INR: 00 | IOR: 77 | OUT: 07 | R0: 07 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 43) LD R03, R02 - AC: 00 | BR: 00 | DP: 06 | DR: 77 | INL: 06 | INR: 00 | IOR: 77 | OUT: 07 | R0: 07 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 44) CMP R03, .00 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 06 | INR: 00 | IOR: 6F | OUT: 07 | R0: 07 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 45) JE .18 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 07 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 46) OUT .01 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 07 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 47) INC R02 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 6F | INR: 00 | IOR: 6F | OUT: 6F | R0: 07 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 48) JMP .04 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 07 | INR: 00 | IOR: 6F | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 49) LD R03, R02 - AC: 00 | BR: 00 | DP: 07 | DR: 6F | INL: 07 | INR: 00 | IOR: 6F | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 50) CMP R03, .00 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 07 | INR: 00 | IOR: 72 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 51) JE .18 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 72 | INR: 00 | IOR: 72 | OUT: 72 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 52) OUT .01 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 72 | INR: 00 | IOR: 72 | OUT: 72 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 53) INC R02 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 72 | INR: 00 | IOR: 72 | OUT: 72 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 54) JMP .04 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 08 | INR: 00 | IOR: 72 | OUT: 09 | R0: 09 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 55) LD R03, R02 - AC: 00 | BR: 00 | DP: 08 | DR: 72 | INL: 08 | INR: 00 | IOR: 72 | OUT: 09 | R0: 09 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 56) CMP R03, .00 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 08 | INR: 00 | IOR: 6C | OUT: 09 | R0: 09 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 57) JE .18 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 09 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 58) OUT .01 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 09 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 59) INC R02 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 6C | INR: 00 | IOR: 6C | OUT: 6C | R0: 09 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 60) JMP .04 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 09 | INR: 00 | IOR: 6C | OUT: 0A | R0: 0A | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 61) LD R03, R02 - AC: 00 | BR: 00 | DP: 09 | DR: 6C | INL: 09 | INR: 00 | IOR: 6C | OUT: 0A | R0: 0A | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 62) CMP R03, .00 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 09 | INR: 00 | IOR: 64 | OUT: 0A | R0: 0A | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 63) JE .18 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 64 | INR: 00 | IOR: 64 | OUT: 64 | R0: 0A | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 64) OUT .01 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 64 | INR: 00 | IOR: 64 | OUT: 64 | R0: 0A | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 65) INC R02 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 64 | INR: 00 | IOR: 64 | OUT: 64 | R0: 0A | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 66) JMP .04 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 0A | INR: 00 | IOR: 64 | OUT: 0B | R0: 0B | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 67) LD R03, R02 - AC: 00 | BR: 00 | DP: 0A | DR: 64 | INL: 0A | INR: 00 | IOR: 64 | OUT: 0B | R0: 0B | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 68) CMP R03, .00 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 0A | INR: 00 | IOR: 21 | OUT: 0B | R0: 0B | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 69) JE .18 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 21 | INR: 00 | IOR: 21 | OUT: 21 | R0: 0B | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 70) OUT .01 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 21 | INR: 00 | IOR: 21 | OUT: 21 | R0: 0B | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 71) INC R02 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 21 | INR: 00 | IOR: 21 | OUT: 21 | R0: 0B | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 72) JMP .04 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 0B | INR: 00 | IOR: 21 | OUT: 0C | R0: 0C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 73) LD R03, R02 - AC: 00 | BR: 00 | DP: 0B | DR: 21 | INL: 0B | INR: 00 | IOR: 21 | OUT: 0C | R0: 0C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 74) CMP R03, .00 - AC: 00 | BR: 00 | DP: 0C | DR: 00 | INL: 0B | INR: 00 | IOR: 00 | OUT: 0C | R0: 0C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG    root:machine.py:23 75) JE .18 - AC: 00 | BR: 00 | DP: 0C | DR: 00 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 0C | N: 0, Z: 1, V: 0, C: 0
+  DEBUG    root:machine.py:23 76) HLT - AC: 00 | BR: 00 | DP: 0C | DR: 00 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 0C | N: 0, Z: 1, V: 0, C: 0
+  INFO     root:machine.py:32 Out buffer: Hello world!

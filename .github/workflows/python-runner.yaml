@@ -1,0 +1,59 @@
+name: Python CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install dependencies
+        run: |
+          pip install pipenv
+          pipenv sync
+
+      - name: Check code formatting with flake8
+        run: pipenv run flake
+
+      - name: Check static types with mypy
+        run: pipenv run mypy
+
+      - name: Run linter
+        run: pipenv run pylint
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      - name: Install dependencies
+        run: |
+          pip install pipenv
+          pipenv sync
+
+      - name: Run tests and collect coverage
+        run: pipenv run pytest
+
+    needs: lint

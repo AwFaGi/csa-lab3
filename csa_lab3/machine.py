@@ -42,4 +42,3 @@ if __name__ == "__main__":
     else:
         assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <buffer_text>"
         simulation(sys.argv[1], list(sys.argv[2]) + ["\0"])
-

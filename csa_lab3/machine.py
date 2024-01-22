@@ -1,4 +1,5 @@
 import logging
+import sys
 
 from csa_lab3.control_unit import ControlUnit
 from csa_lab3.data_path import DataPath
@@ -36,4 +37,9 @@ def simulation(binary_file_name: str, input_buffer: list[str]) -> None:
 
 
 if __name__ == "__main__":
-    simulation("output/hello.bin", list("unused\0"))
+    if len(sys.argv) == 1:
+        simulation("output/cat.bin", list("unused\0"))
+    else:
+        assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <buffer_text>"
+        simulation(sys.argv[1], list(sys.argv[2]) + ["\0"])
+

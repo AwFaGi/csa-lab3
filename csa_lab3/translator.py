@@ -866,9 +866,6 @@ def compile_code(source: str, dest: str) -> None:
 
     write_commands(compiler.commands, compiler.memory, dest)
 
-    # print(*[f"{i.get_addr()} | {repr(i).ljust(6 * 8)} | {str(i)}" for i in compiler.commands], sep='\n')
-    # print(*[f"{i.get_addr()} | {repr(i).ljust(6 * 8)} | {str(i)}" for i in read_commands('file.bin')], sep='\n')
-
 
 if __name__ == "__main__":
     assert len(sys.argv) == 3, "Wrong arguments: translator.py <code_file> <out_file>"

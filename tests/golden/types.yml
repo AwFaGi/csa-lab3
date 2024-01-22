@@ -1,0 +1,179 @@
+source_code: |-
+  {
+    a = 'h';
+    print a;
+
+    print "\n";
+
+    a = 123;
+    print a;
+
+    print "\n";
+
+    a = 'w';
+    print a;
+  }
+
+stdin: |-
+  unused
+
+stdout: |-
+  =========================
+  h
+  0000007b
+  w
+  Instructions: 103
+
+out_code_readable: |-
+  00 | 0000000000100000010100000000000000000100         | MOV $00, $04
+  04 | 0000010000100000110100000000001100000000         | MOV R03, $00
+  08 | 00001000001000111000000000000001                 | OUT .01
+  0b | 0000101100100000111000000000001000001100         | MOV R02, .0c
+  0f | 0000111100000100111100000000001100000010         | LD R03, R02
+  13 | 0001001100010000111000000000001100000000         | CMP R03, .00
+  17 | 00010111000100101000000000100011                 | JE .23
+  1a | 00011010001000111000000000000001                 | OUT .01
+  1d | 00011101000000101100000000000010                 | INC R02
+  20 | 00100000000100011000000000001111                 | JMP .0f
+  23 | 0010001100100001011000000000000001111011         | MOV4 $00, .7b
+  27 | 0010011100100000111000000000001000000100         | MOV R02, .04
+  2b | 00101011000000111100000000000010                 | DEC R02
+  2e | 0010111000000100111100000000001100000010         | LD R03, R02
+  32 | 0011001000001001111000000000001100000100         | SHR R03, .04
+  36 | 0011011000010000111000000000001100001010         | CMP R03, .0a
+  3a | 00111010000101011000000001000100                 | JAE .44
+  3d | 0011110100001110111000000000001100110000         | ADD1 R03, .30
+  41 | 01000001000100011000000001001000                 | JMP .48
+  44 | 0100010000001110111000000000001101010111         | ADD1 R03, .57
+  48 | 01001000001000111000000000000001                 | OUT .01
+  4b | 0100101100000100111100000000001100000010         | LD R03, R02
+  4f | 0100111100001000111000000000001100000100         | SHL R03, .04
+  53 | 0101001100001001111000000000001100000100         | SHR R03, .04
+  57 | 0101011100010000111000000000001100001010         | CMP R03, .0a
+  5b | 01011011000101011000000001100101                 | JAE .65
+  5e | 0101111000001110111000000000001100110000         | ADD1 R03, .30
+  62 | 01100010000100011000000001101001                 | JMP .69
+  65 | 0110010100001110111000000000001101010111         | ADD1 R03, .57
+  69 | 01101001001000111000000000000001                 | OUT .01
+  6c | 01101100000000111100000000000001                 | DEC R01
+  6f | 0110111100010000111000000000001000000000         | CMP R02, .00
+  73 | 01110011000100111000000000101011                 | JNE .2b
+  76 | 0111011000100000111000000000001000001110         | MOV R02, .0e
+  7a | 0111101000000100111100000000001100000010         | LD R03, R02
+  7e | 0111111000010000111000000000001100000000         | CMP R03, .00
+  82 | 10000010000100101000000010001110                 | JE .8e
+  85 | 10000101001000111000000000000001                 | OUT .01
+  88 | 10001000000000101100000000000010                 | INC R02
+  8b | 10001011000100011000000001111010                 | JMP .7a
+  8e | 1000111000100000010100000000000000001000         | MOV $00, $08
+  92 | 1001001000100000110100000000001100000000         | MOV R03, $00
+  96 | 10010110001000111000000000000001                 | OUT .01
+  99 | 1001100100000001                                 | HLT
+
+out_log: |-
+  DEBUG:1) MOV R03, $00 - AC: 68 | BR: 00 | DP: 00 | DR: 68 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:2) OUT .01 - AC: 68 | BR: 00 | DP: 00 | DR: 68 | INL: 00 | INR: 00 | IOR: 68 | OUT: 00 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:3) MOV R02, .0c - AC: 68 | BR: 00 | DP: 00 | DR: 68 | INL: 00 | INR: 00 | IOR: 68 | OUT: 00 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:4) LD R03, R02 - AC: 0C | BR: 00 | DP: 00 | DR: 68 | INL: 00 | INR: 00 | IOR: 68 | OUT: 00 | R0: 0C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:5) CMP R03, .00 - AC: 0C | BR: 00 | DP: 0C | DR: 0A | INL: 00 | INR: 00 | IOR: 0A | OUT: 00 | R0: 0C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:6) JE .23 - AC: 00 | BR: 00 | DP: 0C | DR: 0A | INL: 0A | INR: 00 | IOR: 0A | OUT: 0A | R0: 0C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:7) OUT .01 - AC: 00 | BR: 00 | DP: 0C | DR: 0A | INL: 0A | INR: 00 | IOR: 0A | OUT: 0A | R0: 0C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:8) INC R02 - AC: 00 | BR: 00 | DP: 0C | DR: 0A | INL: 0A | INR: 00 | IOR: 0A | OUT: 0A | R0: 0C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:9) JMP .0f - AC: 00 | BR: 00 | DP: 0C | DR: 0A | INL: 0C | INR: 00 | IOR: 0A | OUT: 0D | R0: 0D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:10) LD R03, R02 - AC: 00 | BR: 00 | DP: 0C | DR: 0A | INL: 0C | INR: 00 | IOR: 0A | OUT: 0D | R0: 0D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:11) CMP R03, .00 - AC: 00 | BR: 00 | DP: 0D | DR: 00 | INL: 0C | INR: 00 | IOR: 00 | OUT: 0D | R0: 0D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:12) JE .23 - AC: 00 | BR: 00 | DP: 0D | DR: 00 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 0D | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:13) MOV4 $00, .7b - AC: 00 | BR: 00 | DP: 0D | DR: 00 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 0D | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:14) MOV R02, .04 - AC: 00 | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 02 | IOR: 00 | OUT: 03 | R0: 0D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:15) DEC R02 - AC: 04 | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 02 | IOR: 00 | OUT: 03 | R0: 04 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:16) LD R03, R02 - AC: 04 | BR: 03 | DP: 03 | DR: 00 | INL: 04 | INR: 02 | IOR: 00 | OUT: 03 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:17) SHR R03, .04 - AC: 04 | BR: 03 | DP: 03 | DR: 00 | INL: 04 | INR: 02 | IOR: 00 | OUT: 03 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:18) CMP R03, .0a - AC: 04 | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:19) JAE .44 - AC: 0A | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 03 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:20) ADD1 R03, .30 - AC: 0A | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 03 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:21) JMP .48 - AC: 0A | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:22) OUT .01 - AC: 0A | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:23) LD R03, R02 - AC: 0A | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:24) SHL R03, .04 - AC: 0A | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 30 | IOR: 00 | OUT: 30 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:25) SHR R03, .04 - AC: 04 | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:26) CMP R03, .0a - AC: 04 | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:27) JAE .65 - AC: 0A | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 03 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:28) ADD1 R03, .30 - AC: 0A | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 03 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:29) JMP .69 - AC: 0A | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:30) OUT .01 - AC: 0A | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:31) DEC R01 - AC: 0A | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:32) CMP R02, .00 - AC: 0A | BR: 02 | DP: 03 | DR: 00 | INL: 03 | INR: 30 | IOR: 30 | OUT: 02 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:33) JNE .2b - AC: 00 | BR: 02 | DP: 03 | DR: 00 | INL: 03 | INR: 00 | IOR: 30 | OUT: 03 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:34) DEC R02 - AC: 00 | BR: 02 | DP: 03 | DR: 00 | INL: 03 | INR: 00 | IOR: 30 | OUT: 03 | R0: 03 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:35) LD R03, R02 - AC: 00 | BR: 02 | DP: 03 | DR: 00 | INL: 03 | INR: 00 | IOR: 30 | OUT: 02 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:36) SHR R03, .04 - AC: 00 | BR: 02 | DP: 02 | DR: 00 | INL: 03 | INR: 00 | IOR: 00 | OUT: 02 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:37) CMP R03, .0a - AC: 04 | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:38) JAE .44 - AC: 0A | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 02 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:39) ADD1 R03, .30 - AC: 0A | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 02 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:40) JMP .48 - AC: 0A | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:41) OUT .01 - AC: 0A | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:42) LD R03, R02 - AC: 0A | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:43) SHL R03, .04 - AC: 0A | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 30 | IOR: 00 | OUT: 30 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:44) SHR R03, .04 - AC: 04 | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:45) CMP R03, .0a - AC: 04 | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:46) JAE .65 - AC: 0A | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 02 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:47) ADD1 R03, .30 - AC: 0A | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 02 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:48) JMP .69 - AC: 0A | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:49) OUT .01 - AC: 0A | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:50) DEC R01 - AC: 0A | BR: 02 | DP: 02 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:51) CMP R02, .00 - AC: 0A | BR: 01 | DP: 02 | DR: 00 | INL: 02 | INR: 30 | IOR: 30 | OUT: 01 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:52) JNE .2b - AC: 00 | BR: 01 | DP: 02 | DR: 00 | INL: 02 | INR: 00 | IOR: 30 | OUT: 02 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:53) DEC R02 - AC: 00 | BR: 01 | DP: 02 | DR: 00 | INL: 02 | INR: 00 | IOR: 30 | OUT: 02 | R0: 02 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:54) LD R03, R02 - AC: 00 | BR: 01 | DP: 02 | DR: 00 | INL: 02 | INR: 00 | IOR: 30 | OUT: 01 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:55) SHR R03, .04 - AC: 00 | BR: 01 | DP: 01 | DR: 00 | INL: 02 | INR: 00 | IOR: 00 | OUT: 01 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:56) CMP R03, .0a - AC: 04 | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:57) JAE .44 - AC: 0A | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 01 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:58) ADD1 R03, .30 - AC: 0A | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 01 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:59) JMP .48 - AC: 0A | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:60) OUT .01 - AC: 0A | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:61) LD R03, R02 - AC: 0A | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:62) SHL R03, .04 - AC: 0A | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 30 | IOR: 00 | OUT: 30 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:63) SHR R03, .04 - AC: 04 | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:64) CMP R03, .0a - AC: 04 | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:65) JAE .65 - AC: 0A | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 01 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:66) ADD1 R03, .30 - AC: 0A | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 01 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:67) JMP .69 - AC: 0A | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:68) OUT .01 - AC: 0A | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:69) DEC R01 - AC: 0A | BR: 01 | DP: 01 | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:70) CMP R02, .00 - AC: 0A | BR: 00 | DP: 01 | DR: 00 | INL: 01 | INR: 30 | IOR: 30 | OUT: 00 | R0: 01 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:71) JNE .2b - AC: 00 | BR: 00 | DP: 01 | DR: 00 | INL: 01 | INR: 00 | IOR: 30 | OUT: 01 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:72) DEC R02 - AC: 00 | BR: 00 | DP: 01 | DR: 00 | INL: 01 | INR: 00 | IOR: 30 | OUT: 01 | R0: 01 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:73) LD R03, R02 - AC: 00 | BR: 00 | DP: 01 | DR: 00 | INL: 01 | INR: 00 | IOR: 30 | OUT: 00 | R0: 00 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:74) SHR R03, .04 - AC: 00 | BR: 00 | DP: 00 | DR: 7B | INL: 01 | INR: 00 | IOR: 7B | OUT: 00 | R0: 00 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:75) CMP R03, .0a - AC: 04 | BR: 00 | DP: 00 | DR: 7B | INL: 7B | INR: 04 | IOR: 07 | OUT: 07 | R0: 00 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:76) JAE .44 - AC: 0A | BR: 00 | DP: 00 | DR: 7B | INL: 07 | INR: 0A | IOR: 07 | OUT: FD | R0: 00 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:77) ADD1 R03, .30 - AC: 0A | BR: 00 | DP: 00 | DR: 7B | INL: 07 | INR: 0A | IOR: 07 | OUT: FD | R0: 00 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:78) JMP .48 - AC: 0A | BR: 00 | DP: 00 | DR: 7B | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:79) OUT .01 - AC: 0A | BR: 00 | DP: 00 | DR: 7B | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:80) LD R03, R02 - AC: 0A | BR: 00 | DP: 00 | DR: 7B | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:81) SHL R03, .04 - AC: 0A | BR: 00 | DP: 00 | DR: 7B | INL: 07 | INR: 30 | IOR: 7B | OUT: 37 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:82) SHR R03, .04 - AC: 04 | BR: 00 | DP: 00 | DR: 7B | INL: 7B | INR: 04 | IOR: B0 | OUT: B0 | R0: 00 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:83) CMP R03, .0a - AC: 04 | BR: 00 | DP: 00 | DR: 7B | INL: B0 | INR: 04 | IOR: 0B | OUT: 0B | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:84) JAE .65 - AC: 0A | BR: 00 | DP: 00 | DR: 7B | INL: 0B | INR: 0A | IOR: 0B | OUT: 01 | R0: 00 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:85) ADD1 R03, .57 - AC: 0A | BR: 00 | DP: 00 | DR: 7B | INL: 0B | INR: 0A | IOR: 0B | OUT: 01 | R0: 00 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:86) OUT .01 - AC: 0A | BR: 00 | DP: 00 | DR: 7B | INL: 0B | INR: 57 | IOR: 62 | OUT: 62 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:87) DEC R01 - AC: 0A | BR: 00 | DP: 00 | DR: 7B | INL: 0B | INR: 57 | IOR: 62 | OUT: 62 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:88) CMP R02, .00 - AC: 0A | BR: FF | DP: 00 | DR: 7B | INL: 00 | INR: 57 | IOR: 62 | OUT: FF | R0: 00 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:89) JNE .2b - AC: 00 | BR: FF | DP: 00 | DR: 7B | INL: 00 | INR: 00 | IOR: 62 | OUT: 00 | R0: 00 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:90) MOV R02, .0e - AC: 00 | BR: FF | DP: 00 | DR: 7B | INL: 00 | INR: 00 | IOR: 62 | OUT: 00 | R0: 00 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:91) LD R03, R02 - AC: 0E | BR: FF | DP: 00 | DR: 7B | INL: 00 | INR: 00 | IOR: 62 | OUT: 00 | R0: 0E | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:92) CMP R03, .00 - AC: 0E | BR: FF | DP: 0E | DR: 0A | INL: 00 | INR: 00 | IOR: 0A | OUT: 00 | R0: 0E | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:93) JE .8e - AC: 00 | BR: FF | DP: 0E | DR: 0A | INL: 0A | INR: 00 | IOR: 0A | OUT: 0A | R0: 0E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:94) OUT .01 - AC: 00 | BR: FF | DP: 0E | DR: 0A | INL: 0A | INR: 00 | IOR: 0A | OUT: 0A | R0: 0E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:95) INC R02 - AC: 00 | BR: FF | DP: 0E | DR: 0A | INL: 0A | INR: 00 | IOR: 0A | OUT: 0A | R0: 0E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:96) JMP .7a - AC: 00 | BR: FF | DP: 0E | DR: 0A | INL: 0E | INR: 00 | IOR: 0A | OUT: 0F | R0: 0F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:97) LD R03, R02 - AC: 00 | BR: FF | DP: 0E | DR: 0A | INL: 0E | INR: 00 | IOR: 0A | OUT: 0F | R0: 0F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:98) CMP R03, .00 - AC: 00 | BR: FF | DP: 0F | DR: 00 | INL: 0E | INR: 00 | IOR: 00 | OUT: 0F | R0: 0F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:99) JE .8e - AC: 00 | BR: FF | DP: 0F | DR: 00 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 0F | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:100) MOV $00, $08 - AC: 00 | BR: FF | DP: 0F | DR: 00 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 0F | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:101) MOV R03, $00 - AC: 77 | BR: 00 | DP: 00 | DR: 77 | INL: 00 | INR: 00 | IOR: 00 | OUT: 00 | R0: 0F | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:102) OUT .01 - AC: 77 | BR: 00 | DP: 00 | DR: 77 | INL: 00 | INR: 00 | IOR: 77 | OUT: 00 | R0: 0F | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:103) HLT - AC: 77 | BR: 00 | DP: 00 | DR: 77 | INL: 00 | INR: 00 | IOR: 77 | OUT: 00 | R0: 0F | N: 0, Z: 1, V: 0, C: 0
+  INFO:Out buffer: h
+  0000007b
+  w

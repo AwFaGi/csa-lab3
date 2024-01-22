@@ -88,7 +88,6 @@ class ControlUnit:
                         self.write_to_mem(self.data_path.BR, self.data_path.AC)
                     case OperandAddress.MEMORY_DIRECT:
                         self.data_path.BR.set_value(dest.value)
-                        # self.read_from_mem(self.data_path.BR, self.data_path.BR)
                         self.write_to_mem(self.data_path.BR, self.data_path.AC)
                     case OperandAddress.REGISTER:
                         self._move(self.data_path.AC, self.register_num_to_register(dest.value))

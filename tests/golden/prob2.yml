@@ -76,409 +76,409 @@ out_code_readable: |-
   99 | 1001100100000001                                 | HLT
 
 out_log: |-
-  DEBUG    root:machine.py:23 1) MOV4 $04, .01 - AC: 00 | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 02 | IOR: 00 | OUT: 03 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 2) MOV4 $08, .01 - AC: 00 | BR: 07 | DP: 07 | DR: 00 | INL: 00 | INR: 06 | IOR: 00 | OUT: 07 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 3) MOV4 $0c, .01 - AC: 00 | BR: 0B | DP: 0B | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: 0B | R0: 00 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 4) MOV4 $10, $14 - AC: 00 | BR: 0F | DP: 0F | DR: 00 | INL: 00 | INR: 0E | IOR: 00 | OUT: 0F | R0: 00 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 5) MOV4 $18, .00 - AC: 00 | BR: 14 | DP: 13 | DR: 00 | INL: 00 | INR: 13 | IOR: 00 | OUT: 14 | R0: 18 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 6) MOV4 $1c, .00 - AC: 00 | BR: 1B | DP: 1B | DR: 00 | INL: 00 | INR: 1A | IOR: 00 | OUT: 1B | R0: 18 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 7) CMP $10, $04 - AC: 00 | BR: 1F | DP: 1F | DR: 00 | INL: 00 | INR: 1E | IOR: 00 | OUT: 1F | R0: 18 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 8) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 18 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 9) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 18 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 10) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 18 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 11) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 18 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 12) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 13) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 14) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 01 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 15) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 01 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 16) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 17) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 18) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 19) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 20) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 21) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 22) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 23) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 02 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 24) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 02 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 25) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 02 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 26) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 27) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 28) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 29) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 30) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 31) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 32) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 33) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 03 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 34) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 03 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 35) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 03 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 36) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 37) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 38) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 39) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 40) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 41) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 42) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 43) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 05 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 44) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 05 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 45) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 05 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 46) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 47) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 48) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 49) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 50) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 51) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 52) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 53) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 08 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 54) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 08 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 55) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 08 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 56) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 57) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 58) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 59) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 60) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 61) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 62) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 63) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 0D | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 64) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 0D | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 65) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 0D | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 66) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 67) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 68) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 69) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 70) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 71) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 72) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 73) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 15 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 74) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 15 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 75) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 15 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 76) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 77) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 78) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 79) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 80) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 81) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 82) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 83) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 22 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 84) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 22 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 85) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 22 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 86) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 87) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 88) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 89) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 90) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 91) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 92) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 93) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 37 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 94) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 37 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 95) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 37 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 96) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 97) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 98) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 99) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 100) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 101) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 102) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 103) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 59 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 104) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 59 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 105) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 59 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 106) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 107) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 108) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 109) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 110) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 111) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 112) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 113) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 90 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 114) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 90 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 115) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 90 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 116) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 117) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 118) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 119) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 120) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 121) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 122) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 123) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: E9 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 124) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: E9 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 125) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: E9 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 126) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 127) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 128) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 129) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 130) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 131) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 132) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 133) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 79 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 134) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 79 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 135) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 79 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 136) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 137) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 138) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 139) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 140) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 141) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 142) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 143) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 62 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 144) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 62 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 145) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 62 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 146) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 147) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 148) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 149) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 150) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 151) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 152) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 153) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: DB | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 154) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: DB | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 155) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: DB | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 156) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 157) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 158) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 159) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 160) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 161) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 162) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 163) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 164) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 3D | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 165) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 3D | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 166) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 167) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 168) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 169) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 170) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 171) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 172) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 173) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 18 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 174) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 18 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 175) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 18 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 176) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 177) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 178) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 179) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 180) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 181) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 182) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 183) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 55 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 184) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 55 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 185) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 55 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 186) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 187) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 188) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 189) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 190) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 191) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 192) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 193) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 6D | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 194) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 6D | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 195) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 6D | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 196) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 197) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 198) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 199) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 200) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 201) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 202) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 203) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: C2 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 204) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: C2 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 205) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: C2 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 206) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 207) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 208) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 209) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 210) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 211) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 212) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 213) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 2F | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 214) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 2F | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 215) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 2F | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 216) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 217) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 218) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 219) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 220) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 221) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 222) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 223) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: F1 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 224) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: F1 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 225) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: F1 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 226) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 227) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 228) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 229) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 230) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 231) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 232) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 233) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 20 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 234) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 20 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 235) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 20 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 236) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 237) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 238) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 239) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 240) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 241) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 242) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 243) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 11 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 244) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 11 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 245) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 11 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 246) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 247) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 248) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 249) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 250) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 251) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 252) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 253) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 31 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 254) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 31 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 255) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 31 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 256) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 257) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 258) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 02 | INL: 3D | INR: 02 | IOR: 00 | OUT: 3B | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 259) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 02 | INL: 3D | INR: 02 | IOR: 00 | OUT: 3B | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 260) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 261) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 262) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 263) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 42 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 264) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 42 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 265) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 42 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 266) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 267) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 268) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 04 | INL: 3D | INR: 04 | IOR: 00 | OUT: 39 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 269) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 04 | INL: 3D | INR: 04 | IOR: 00 | OUT: 39 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 270) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 271) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 272) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 273) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 73 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 274) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 73 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 275) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 73 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 276) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 277) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 278) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 07 | INL: 3D | INR: 07 | IOR: 00 | OUT: 36 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 279) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 07 | INL: 3D | INR: 07 | IOR: 00 | OUT: 36 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 280) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 281) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 282) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 283) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: B5 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 284) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: B5 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 285) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: B5 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 286) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 287) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 288) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 0C | INL: 3D | INR: 0C | IOR: 00 | OUT: 31 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 289) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 0C | INL: 3D | INR: 0C | IOR: 00 | OUT: 31 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 290) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 291) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 292) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 293) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 28 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 294) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 28 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 295) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 28 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 296) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 297) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 298) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 14 | INL: 3D | INR: 14 | IOR: 00 | OUT: 29 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 299) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 14 | INL: 3D | INR: 14 | IOR: 00 | OUT: 29 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 300) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 301) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 302) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 303) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: DD | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 304) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: DD | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 305) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: DD | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 306) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 307) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 308) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 21 | INL: 3D | INR: 21 | IOR: 00 | OUT: 1C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 309) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 21 | INL: 3D | INR: 21 | IOR: 00 | OUT: 1C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 310) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 311) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 312) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 313) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 05 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 314) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 05 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 315) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 05 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 316) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 317) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 318) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 35 | INL: 3D | INR: 35 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 319) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 35 | INL: 3D | INR: 35 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 320) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 321) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 322) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 323) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: E2 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 324) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: E2 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 325) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: E2 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 326) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 327) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 328) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 08 | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 329) JMP .4a - AC: 12 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 08 | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 330) MOV R02, .20 - AC: 12 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 08 | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 331) DEC R02 - AC: 20 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 20 | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 332) LD R03, R02 - AC: 20 | BR: 06 | DP: 06 | DR: 57 | INL: 20 | INR: 57 | IOR: 00 | OUT: 1F | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 333) SHR R03, .04 - AC: 20 | BR: 06 | DP: 1F | DR: 00 | INL: 20 | INR: 57 | IOR: 00 | OUT: 1F | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 334) CMP R03, .0a - AC: 04 | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 335) JAE .67 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 336) ADD1 R03, .30 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 337) JMP .6b - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 338) OUT .01 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 339) LD R03, R02 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 340) SHL R03, .04 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 00 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 341) SHR R03, .04 - AC: 04 | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 342) CMP R03, .0a - AC: 04 | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 343) JAE .88 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 344) ADD1 R03, .30 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 345) JMP .8c - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 346) OUT .01 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 347) DEC R01 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 348) CMP R02, .1c - AC: 0A | BR: 05 | DP: 1F | DR: 00 | INL: 06 | INR: 30 | IOR: 30 | OUT: 05 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 349) JNE .4e - AC: 1C | BR: 05 | DP: 1F | DR: 00 | INL: 1F | INR: 1C | IOR: 30 | OUT: 03 | R0: 1F | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 350) DEC R02 - AC: 1C | BR: 05 | DP: 1F | DR: 00 | INL: 1F | INR: 1C | IOR: 30 | OUT: 03 | R0: 1F | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 351) LD R03, R02 - AC: 1C | BR: 05 | DP: 1F | DR: 00 | INL: 1F | INR: 1C | IOR: 30 | OUT: 1E | R0: 1E | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 352) SHR R03, .04 - AC: 1C | BR: 05 | DP: 1E | DR: 35 | INL: 1F | INR: 1C | IOR: 35 | OUT: 1E | R0: 1E | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 353) CMP R03, .0a - AC: 04 | BR: 05 | DP: 1E | DR: 35 | INL: 35 | INR: 04 | IOR: 03 | OUT: 03 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 354) JAE .67 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 0A | IOR: 03 | OUT: F9 | R0: 1E | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 355) ADD1 R03, .30 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 0A | IOR: 03 | OUT: F9 | R0: 1E | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 356) JMP .6b - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 33 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 357) OUT .01 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 33 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 358) LD R03, R02 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 33 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 359) SHL R03, .04 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 35 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 360) SHR R03, .04 - AC: 04 | BR: 05 | DP: 1E | DR: 35 | INL: 35 | INR: 04 | IOR: 50 | OUT: 50 | R0: 1E | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 361) CMP R03, .0a - AC: 04 | BR: 05 | DP: 1E | DR: 35 | INL: 50 | INR: 04 | IOR: 05 | OUT: 05 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 362) JAE .88 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 0A | IOR: 05 | OUT: FB | R0: 1E | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 363) ADD1 R03, .30 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 0A | IOR: 05 | OUT: FB | R0: 1E | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 364) JMP .8c - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 35 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 365) OUT .01 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 35 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 366) DEC R01 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 35 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 367) CMP R02, .1c - AC: 0A | BR: 04 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 04 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 368) JNE .4e - AC: 1C | BR: 04 | DP: 1E | DR: 35 | INL: 1E | INR: 1C | IOR: 35 | OUT: 02 | R0: 1E | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 369) DEC R02 - AC: 1C | BR: 04 | DP: 1E | DR: 35 | INL: 1E | INR: 1C | IOR: 35 | OUT: 02 | R0: 1E | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 370) LD R03, R02 - AC: 1C | BR: 04 | DP: 1E | DR: 35 | INL: 1E | INR: 1C | IOR: 35 | OUT: 1D | R0: 1D | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 371) SHR R03, .04 - AC: 1C | BR: 04 | DP: 1D | DR: C7 | INL: 1E | INR: 1C | IOR: C7 | OUT: 1D | R0: 1D | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 372) CMP R03, .0a - AC: 04 | BR: 04 | DP: 1D | DR: C7 | INL: C7 | INR: 04 | IOR: 0C | OUT: 0C | R0: 1D | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 373) JAE .67 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 0A | IOR: 0C | OUT: 02 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 374) ADD1 R03, .57 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 0A | IOR: 0C | OUT: 02 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 375) OUT .01 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 57 | IOR: 63 | OUT: 63 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 376) LD R03, R02 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 57 | IOR: 63 | OUT: 63 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 377) SHL R03, .04 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 57 | IOR: C7 | OUT: 63 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 378) SHR R03, .04 - AC: 04 | BR: 04 | DP: 1D | DR: C7 | INL: C7 | INR: 04 | IOR: 70 | OUT: 70 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 379) CMP R03, .0a - AC: 04 | BR: 04 | DP: 1D | DR: C7 | INL: 70 | INR: 04 | IOR: 07 | OUT: 07 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 380) JAE .88 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 0A | IOR: 07 | OUT: FD | R0: 1D | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 381) ADD1 R03, .30 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 0A | IOR: 07 | OUT: FD | R0: 1D | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 382) JMP .8c - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 383) OUT .01 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 384) DEC R01 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 385) CMP R02, .1c - AC: 0A | BR: 03 | DP: 1D | DR: C7 | INL: 04 | INR: 30 | IOR: 37 | OUT: 03 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 386) JNE .4e - AC: 1C | BR: 03 | DP: 1D | DR: C7 | INL: 1D | INR: 1C | IOR: 37 | OUT: 01 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 387) DEC R02 - AC: 1C | BR: 03 | DP: 1D | DR: C7 | INL: 1D | INR: 1C | IOR: 37 | OUT: 01 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 388) LD R03, R02 - AC: 1C | BR: 03 | DP: 1D | DR: C7 | INL: 1D | INR: 1C | IOR: 37 | OUT: 1C | R0: 1C | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 389) SHR R03, .04 - AC: 1C | BR: 03 | DP: 1C | DR: E1 | INL: 1D | INR: 1C | IOR: E1 | OUT: 1C | R0: 1C | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 390) CMP R03, .0a - AC: 04 | BR: 03 | DP: 1C | DR: E1 | INL: E1 | INR: 04 | IOR: 0E | OUT: 0E | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 391) JAE .67 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 0A | IOR: 0E | OUT: 04 | R0: 1C | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 392) ADD1 R03, .57 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 0A | IOR: 0E | OUT: 04 | R0: 1C | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 393) OUT .01 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 57 | IOR: 65 | OUT: 65 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 394) LD R03, R02 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 57 | IOR: 65 | OUT: 65 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 395) SHL R03, .04 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 57 | IOR: E1 | OUT: 65 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 396) SHR R03, .04 - AC: 04 | BR: 03 | DP: 1C | DR: E1 | INL: E1 | INR: 04 | IOR: 10 | OUT: 10 | R0: 1C | N: 0, Z: 0, V: 0, C: 1
-  DEBUG    root:machine.py:23 397) CMP R03, .0a - AC: 04 | BR: 03 | DP: 1C | DR: E1 | INL: 10 | INR: 04 | IOR: 01 | OUT: 01 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 398) JAE .88 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 0A | IOR: 01 | OUT: F7 | R0: 1C | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 399) ADD1 R03, .30 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 0A | IOR: 01 | OUT: F7 | R0: 1C | N: 1, Z: 0, V: 1, C: 0
-  DEBUG    root:machine.py:23 400) JMP .8c - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 30 | IOR: 31 | OUT: 31 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 401) OUT .01 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 30 | IOR: 31 | OUT: 31 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 402) DEC R01 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 30 | IOR: 31 | OUT: 31 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 403) CMP R02, .1c - AC: 0A | BR: 02 | DP: 1C | DR: E1 | INL: 03 | INR: 30 | IOR: 31 | OUT: 02 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
-  DEBUG    root:machine.py:23 404) JNE .4e - AC: 1C | BR: 02 | DP: 1C | DR: E1 | INL: 1C | INR: 1C | IOR: 31 | OUT: 00 | R0: 1C | N: 0, Z: 1, V: 0, C: 0
-  DEBUG    root:machine.py:23 405) HLT - AC: 1C | BR: 02 | DP: 1C | DR: E1 | INL: 1C | INR: 1C | IOR: 31 | OUT: 00 | R0: 1C | N: 0, Z: 1, V: 0, C: 0
-  INFO     root:machine.py:32 Out buffer: 0035c7e1
+  DEBUG:1) MOV4 $04, .01 - AC: 00 | BR: 03 | DP: 03 | DR: 00 | INL: 00 | INR: 02 | IOR: 00 | OUT: 03 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:2) MOV4 $08, .01 - AC: 00 | BR: 07 | DP: 07 | DR: 00 | INL: 00 | INR: 06 | IOR: 00 | OUT: 07 | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:3) MOV4 $0c, .01 - AC: 00 | BR: 0B | DP: 0B | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: 0B | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:4) MOV4 $10, $14 - AC: 00 | BR: 0F | DP: 0F | DR: 00 | INL: 00 | INR: 0E | IOR: 00 | OUT: 0F | R0: 00 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:5) MOV4 $18, .00 - AC: 00 | BR: 14 | DP: 13 | DR: 00 | INL: 00 | INR: 13 | IOR: 00 | OUT: 14 | R0: 18 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:6) MOV4 $1c, .00 - AC: 00 | BR: 1B | DP: 1B | DR: 00 | INL: 00 | INR: 1A | IOR: 00 | OUT: 1B | R0: 18 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:7) CMP $10, $04 - AC: 00 | BR: 1F | DP: 1F | DR: 00 | INL: 00 | INR: 1E | IOR: 00 | OUT: 1F | R0: 18 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:8) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 18 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:9) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 18 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:10) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 18 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:11) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 18 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:12) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:13) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:14) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 01 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:15) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 01 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:16) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:17) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:18) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:19) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:20) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:21) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:22) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:23) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 02 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:24) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 02 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:25) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 02 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:26) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:27) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:28) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:29) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:30) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:31) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:32) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:33) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 03 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:34) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 03 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:35) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 03 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:36) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:37) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:38) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:39) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:40) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:41) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:42) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:43) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 05 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:44) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 05 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:45) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 05 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:46) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:47) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:48) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:49) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:50) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:51) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:52) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:53) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 08 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:54) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 08 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:55) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 08 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:56) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:57) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:58) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:59) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:60) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:61) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:62) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:63) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 0D | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:64) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 0D | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:65) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 0D | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:66) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:67) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:68) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:69) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:70) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:71) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:72) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:73) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 15 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:74) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 15 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:75) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 15 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:76) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:77) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:78) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:79) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:80) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:81) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:82) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:83) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 22 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:84) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 22 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:85) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 22 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:86) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:87) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:88) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:89) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:90) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:91) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:92) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:93) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 37 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:94) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 37 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:95) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 37 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:96) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:97) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:98) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:99) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:100) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:101) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:102) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:103) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 59 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:104) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 59 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:105) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 59 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:106) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:107) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:108) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:109) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:110) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:111) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:112) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:113) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 90 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:114) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 90 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:115) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 90 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:116) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:117) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:118) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:119) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:120) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:121) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:122) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:123) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: E9 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:124) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: E9 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:125) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: E9 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:126) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:127) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:128) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:129) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:130) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:131) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:132) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:133) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 79 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:134) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 79 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:135) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 79 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:136) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:137) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:138) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:139) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:140) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:141) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:142) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:143) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 62 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:144) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 62 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:145) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 62 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:146) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:147) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:148) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:149) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:150) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:151) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:152) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:153) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: DB | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:154) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: DB | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:155) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: DB | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:156) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:157) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:158) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:159) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:160) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:161) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:162) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:163) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:164) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 3D | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:165) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 3D | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:166) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:167) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:168) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:169) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:170) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:171) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:172) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:173) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 18 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:174) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 18 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:175) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 18 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:176) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:177) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:178) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:179) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:180) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:181) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:182) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:183) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 55 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:184) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 55 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:185) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 55 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:186) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:187) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:188) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:189) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:190) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:191) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:192) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:193) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 6D | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:194) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 6D | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:195) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 6D | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:196) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:197) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:198) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:199) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:200) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:201) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:202) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:203) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: C2 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:204) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: C2 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:205) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: C2 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:206) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:207) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:208) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:209) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:210) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:211) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:212) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:213) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 2F | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:214) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 2F | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:215) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 2F | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:216) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:217) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:218) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:219) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:220) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:221) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:222) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:223) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: F1 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:224) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: F1 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:225) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: F1 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:226) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:227) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:228) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:229) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 00 | INL: 3D | INR: 00 | IOR: 00 | OUT: 3D | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:230) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:231) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:232) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:233) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 20 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:234) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 20 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:235) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 20 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:236) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:237) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:238) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:239) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:240) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:241) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:242) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:243) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 11 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:244) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 11 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:245) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 11 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:246) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:247) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:248) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:249) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 01 | INL: 3D | INR: 01 | IOR: 00 | OUT: 3C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:250) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:251) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:252) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:253) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 31 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:254) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 31 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:255) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 31 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:256) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:257) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:258) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 02 | INL: 3D | INR: 02 | IOR: 00 | OUT: 3B | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:259) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 02 | INL: 3D | INR: 02 | IOR: 00 | OUT: 3B | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:260) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:261) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:262) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:263) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: 42 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:264) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 42 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:265) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 42 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:266) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:267) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:268) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 04 | INL: 3D | INR: 04 | IOR: 00 | OUT: 39 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:269) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 04 | INL: 3D | INR: 04 | IOR: 00 | OUT: 39 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:270) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:271) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:272) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:273) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 73 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:274) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 73 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:275) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 73 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:276) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:277) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:278) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 07 | INL: 3D | INR: 07 | IOR: 00 | OUT: 36 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:279) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 07 | INL: 3D | INR: 07 | IOR: 00 | OUT: 36 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:280) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:281) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:282) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:283) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: B5 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:284) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: B5 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:285) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: B5 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:286) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:287) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:288) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 0C | INL: 3D | INR: 0C | IOR: 00 | OUT: 31 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:289) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 0C | INL: 3D | INR: 0C | IOR: 00 | OUT: 31 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:290) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:291) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:292) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:293) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 28 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:294) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 28 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:295) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 28 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:296) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:297) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:298) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 14 | INL: 3D | INR: 14 | IOR: 00 | OUT: 29 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:299) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 14 | INL: 3D | INR: 14 | IOR: 00 | OUT: 29 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:300) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:301) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:302) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:303) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: DD | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:304) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: DD | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:305) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: DD | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:306) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:307) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:308) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 21 | INL: 3D | INR: 21 | IOR: 00 | OUT: 1C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:309) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 21 | INL: 3D | INR: 21 | IOR: 00 | OUT: 1C | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:310) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:311) ADD $1c <- $1c, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:312) ADD $18 <- $00, $04 - AC: 20 | BR: 20 | DP: 08 | DR: 01 | INL: 00 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:313) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 01 | INL: 05 | INR: 01 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:314) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: 05 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:315) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: 05 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:316) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:317) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 01 | IOR: 00 | OUT: 00 | R0: 08 | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:318) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 35 | INL: 3D | INR: 35 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:319) CMP $0c, $08 - AC: 12 | BR: 06 | DP: 06 | DR: 35 | INL: 3D | INR: 35 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:320) JE .30 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:321) JMP .35 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:322) ADD $18 <- $00, $04 - AC: 0C | BR: 08 | DP: 08 | DR: 00 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:323) MOV4 $00, $04 - AC: 1C | BR: 04 | DP: 08 | DR: 00 | INL: E2 | INR: 00 | IOR: 00 | OUT: 08 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:324) MOV4 $04, $18 - AC: 00 | BR: 04 | DP: 03 | DR: 00 | INL: E2 | INR: 03 | IOR: 00 | OUT: 04 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:325) SUB $08 <- .01, $08 - AC: 00 | BR: 08 | DP: 07 | DR: 00 | INL: E2 | INR: 07 | IOR: 00 | OUT: 08 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:326) JMP .1c - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:327) CMP $10, $04 - AC: 08 | BR: 08 | DP: 08 | DR: 01 | INL: 01 | INR: 00 | IOR: 00 | OUT: 01 | R0: 08 | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:328) JAE .26 - AC: 12 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 08 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:329) JMP .4a - AC: 12 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 08 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:330) MOV R02, .20 - AC: 12 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 08 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:331) DEC R02 - AC: 20 | BR: 06 | DP: 06 | DR: 57 | INL: 3D | INR: 57 | IOR: 00 | OUT: E6 | R0: 20 | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:332) LD R03, R02 - AC: 20 | BR: 06 | DP: 06 | DR: 57 | INL: 20 | INR: 57 | IOR: 00 | OUT: 1F | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:333) SHR R03, .04 - AC: 20 | BR: 06 | DP: 1F | DR: 00 | INL: 20 | INR: 57 | IOR: 00 | OUT: 1F | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:334) CMP R03, .0a - AC: 04 | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:335) JAE .67 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:336) ADD1 R03, .30 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:337) JMP .6b - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:338) OUT .01 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:339) LD R03, R02 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:340) SHL R03, .04 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 00 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:341) SHR R03, .04 - AC: 04 | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:342) CMP R03, .0a - AC: 04 | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 04 | IOR: 00 | OUT: 00 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:343) JAE .88 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:344) ADD1 R03, .30 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 0A | IOR: 00 | OUT: F6 | R0: 1F | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:345) JMP .8c - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:346) OUT .01 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:347) DEC R01 - AC: 0A | BR: 06 | DP: 1F | DR: 00 | INL: 00 | INR: 30 | IOR: 30 | OUT: 30 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:348) CMP R02, .1c - AC: 0A | BR: 05 | DP: 1F | DR: 00 | INL: 06 | INR: 30 | IOR: 30 | OUT: 05 | R0: 1F | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:349) JNE .4e - AC: 1C | BR: 05 | DP: 1F | DR: 00 | INL: 1F | INR: 1C | IOR: 30 | OUT: 03 | R0: 1F | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:350) DEC R02 - AC: 1C | BR: 05 | DP: 1F | DR: 00 | INL: 1F | INR: 1C | IOR: 30 | OUT: 03 | R0: 1F | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:351) LD R03, R02 - AC: 1C | BR: 05 | DP: 1F | DR: 00 | INL: 1F | INR: 1C | IOR: 30 | OUT: 1E | R0: 1E | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:352) SHR R03, .04 - AC: 1C | BR: 05 | DP: 1E | DR: 35 | INL: 1F | INR: 1C | IOR: 35 | OUT: 1E | R0: 1E | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:353) CMP R03, .0a - AC: 04 | BR: 05 | DP: 1E | DR: 35 | INL: 35 | INR: 04 | IOR: 03 | OUT: 03 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:354) JAE .67 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 0A | IOR: 03 | OUT: F9 | R0: 1E | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:355) ADD1 R03, .30 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 0A | IOR: 03 | OUT: F9 | R0: 1E | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:356) JMP .6b - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 33 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:357) OUT .01 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 33 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:358) LD R03, R02 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 33 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:359) SHL R03, .04 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 03 | INR: 30 | IOR: 35 | OUT: 33 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:360) SHR R03, .04 - AC: 04 | BR: 05 | DP: 1E | DR: 35 | INL: 35 | INR: 04 | IOR: 50 | OUT: 50 | R0: 1E | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:361) CMP R03, .0a - AC: 04 | BR: 05 | DP: 1E | DR: 35 | INL: 50 | INR: 04 | IOR: 05 | OUT: 05 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:362) JAE .88 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 0A | IOR: 05 | OUT: FB | R0: 1E | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:363) ADD1 R03, .30 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 0A | IOR: 05 | OUT: FB | R0: 1E | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:364) JMP .8c - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 35 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:365) OUT .01 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 35 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:366) DEC R01 - AC: 0A | BR: 05 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 35 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:367) CMP R02, .1c - AC: 0A | BR: 04 | DP: 1E | DR: 35 | INL: 05 | INR: 30 | IOR: 35 | OUT: 04 | R0: 1E | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:368) JNE .4e - AC: 1C | BR: 04 | DP: 1E | DR: 35 | INL: 1E | INR: 1C | IOR: 35 | OUT: 02 | R0: 1E | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:369) DEC R02 - AC: 1C | BR: 04 | DP: 1E | DR: 35 | INL: 1E | INR: 1C | IOR: 35 | OUT: 02 | R0: 1E | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:370) LD R03, R02 - AC: 1C | BR: 04 | DP: 1E | DR: 35 | INL: 1E | INR: 1C | IOR: 35 | OUT: 1D | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:371) SHR R03, .04 - AC: 1C | BR: 04 | DP: 1D | DR: C7 | INL: 1E | INR: 1C | IOR: C7 | OUT: 1D | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:372) CMP R03, .0a - AC: 04 | BR: 04 | DP: 1D | DR: C7 | INL: C7 | INR: 04 | IOR: 0C | OUT: 0C | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:373) JAE .67 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 0A | IOR: 0C | OUT: 02 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:374) ADD1 R03, .57 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 0A | IOR: 0C | OUT: 02 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:375) OUT .01 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 57 | IOR: 63 | OUT: 63 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:376) LD R03, R02 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 57 | IOR: 63 | OUT: 63 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:377) SHL R03, .04 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 0C | INR: 57 | IOR: C7 | OUT: 63 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:378) SHR R03, .04 - AC: 04 | BR: 04 | DP: 1D | DR: C7 | INL: C7 | INR: 04 | IOR: 70 | OUT: 70 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:379) CMP R03, .0a - AC: 04 | BR: 04 | DP: 1D | DR: C7 | INL: 70 | INR: 04 | IOR: 07 | OUT: 07 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:380) JAE .88 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 0A | IOR: 07 | OUT: FD | R0: 1D | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:381) ADD1 R03, .30 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 0A | IOR: 07 | OUT: FD | R0: 1D | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:382) JMP .8c - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:383) OUT .01 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:384) DEC R01 - AC: 0A | BR: 04 | DP: 1D | DR: C7 | INL: 07 | INR: 30 | IOR: 37 | OUT: 37 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:385) CMP R02, .1c - AC: 0A | BR: 03 | DP: 1D | DR: C7 | INL: 04 | INR: 30 | IOR: 37 | OUT: 03 | R0: 1D | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:386) JNE .4e - AC: 1C | BR: 03 | DP: 1D | DR: C7 | INL: 1D | INR: 1C | IOR: 37 | OUT: 01 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:387) DEC R02 - AC: 1C | BR: 03 | DP: 1D | DR: C7 | INL: 1D | INR: 1C | IOR: 37 | OUT: 01 | R0: 1D | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:388) LD R03, R02 - AC: 1C | BR: 03 | DP: 1D | DR: C7 | INL: 1D | INR: 1C | IOR: 37 | OUT: 1C | R0: 1C | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:389) SHR R03, .04 - AC: 1C | BR: 03 | DP: 1C | DR: E1 | INL: 1D | INR: 1C | IOR: E1 | OUT: 1C | R0: 1C | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:390) CMP R03, .0a - AC: 04 | BR: 03 | DP: 1C | DR: E1 | INL: E1 | INR: 04 | IOR: 0E | OUT: 0E | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:391) JAE .67 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 0A | IOR: 0E | OUT: 04 | R0: 1C | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:392) ADD1 R03, .57 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 0A | IOR: 0E | OUT: 04 | R0: 1C | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:393) OUT .01 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 57 | IOR: 65 | OUT: 65 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:394) LD R03, R02 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 57 | IOR: 65 | OUT: 65 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:395) SHL R03, .04 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 0E | INR: 57 | IOR: E1 | OUT: 65 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:396) SHR R03, .04 - AC: 04 | BR: 03 | DP: 1C | DR: E1 | INL: E1 | INR: 04 | IOR: 10 | OUT: 10 | R0: 1C | N: 0, Z: 0, V: 0, C: 1
+  DEBUG:397) CMP R03, .0a - AC: 04 | BR: 03 | DP: 1C | DR: E1 | INL: 10 | INR: 04 | IOR: 01 | OUT: 01 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:398) JAE .88 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 0A | IOR: 01 | OUT: F7 | R0: 1C | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:399) ADD1 R03, .30 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 0A | IOR: 01 | OUT: F7 | R0: 1C | N: 1, Z: 0, V: 1, C: 0
+  DEBUG:400) JMP .8c - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 30 | IOR: 31 | OUT: 31 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:401) OUT .01 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 30 | IOR: 31 | OUT: 31 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:402) DEC R01 - AC: 0A | BR: 03 | DP: 1C | DR: E1 | INL: 01 | INR: 30 | IOR: 31 | OUT: 31 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:403) CMP R02, .1c - AC: 0A | BR: 02 | DP: 1C | DR: E1 | INL: 03 | INR: 30 | IOR: 31 | OUT: 02 | R0: 1C | N: 0, Z: 0, V: 0, C: 0
+  DEBUG:404) JNE .4e - AC: 1C | BR: 02 | DP: 1C | DR: E1 | INL: 1C | INR: 1C | IOR: 31 | OUT: 00 | R0: 1C | N: 0, Z: 1, V: 0, C: 0
+  DEBUG:405) HLT - AC: 1C | BR: 02 | DP: 1C | DR: E1 | INL: 1C | INR: 1C | IOR: 31 | OUT: 00 | R0: 1C | N: 0, Z: 1, V: 0, C: 0
+  INFO:Out buffer: 0035c7e1

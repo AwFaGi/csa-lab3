@@ -1,0 +1,14 @@
+{
+    a = 'h';
+    print a;
+
+    print "\n";
+
+    a = 123;
+    print a;
+
+    print "\n";
+
+    a = 'w';
+    print a;
+}
